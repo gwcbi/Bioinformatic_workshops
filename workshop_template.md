@@ -31,3 +31,6 @@ Do you need a computer? What skill level is expected? Do you need to register fi
 ## Other important links
 * [first important link](firstlink)
 * [other important link](nextlink)
+
+## Workshop materials
+* [Link to powerpoint etc](powerpoint.pdf)
