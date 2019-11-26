@@ -13,7 +13,9 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 #### Retrotranscriptomics
 * [Running Telescope](telescope.md)
 #### Transcriptomics
-
+* [Gene expression](gene_expression.md)
+* [Differential expression](differential_expression.md)
+* [Volcano plots](volcano.md)
 
 
 
