@@ -19,6 +19,11 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 
 
 
+## Exercises:
+
+* [Suspicious sushi]()
+
+
 ## Past workshops:
 
 * [Whodunit? Forensics with DNA & Bioinformatics (YSB 2019)](whodunit_workshop)
