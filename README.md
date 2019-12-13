@@ -24,7 +24,7 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 #### [Transcriptomics](https://github.com/gwcbi/Workshops/tree/master/Transcriptomics)
 * [Gene expression](gene_expression.md)
 * [Differential expression](differential_expression.md)
-* [Volcano plots](volcano.md)
+* [Volcano plots](https://github.com/gwcbi/Workshops/tree/master/Transcriptomics/volcano.md)
 
 
 
