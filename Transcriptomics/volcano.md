@@ -47,7 +47,7 @@ We can now plot our table:
 
 ```
 ggplot(genes, aes(x = log2FoldChange, y = -log10(pvalue))) +
-  geom_point(aes(color = Significance)) +
+  geom_point(aes(color = Direction)) +
   scale_color_manual(values = c("green1", "red")) +
   xlab(expression('Log'[2]*'Fold Change in Expression Value')) +
   ylab(expression('-Log'[10]*'P-Value')) +
