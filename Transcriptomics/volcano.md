@@ -64,3 +64,9 @@ And We can save the plot by executing the command:
 ```
 ggsave("VolcanoPlot.png", plot = last_plot(), height = 10, width=15, device = "png", dpi = 500, limitsize = FALSE)
 ```
+
+Your image will look like this:
+
+![Your volcano Plot](./Images/userVolcanoPlot.png)
+
+Congratulations, you just learned how to make a volcano plot!
