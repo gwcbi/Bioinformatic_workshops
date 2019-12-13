@@ -31,8 +31,8 @@ genes <- read.csv(file="AllDifferentiallyExpressed.csv", header=TRUE, sep=",")
 We will identify the upregulated and downregulated genes:
 
 ```
-sigUp <- which(genes$log2FoldChange>0
-sigDown <- which(genes$log2FoldChange<0
+sigUp <- which(genes$log2FoldChange>0)
+sigDown <- which(genes$log2FoldChange<0)
 ```
 
 We will add a column called "Direction" that will indicate whether the gene is down or upregulated
