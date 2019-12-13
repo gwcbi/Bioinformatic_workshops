@@ -21,7 +21,7 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 * [Running PathoScope for Microbiome Characterization](pathoscope.md)
 #### Retrotranscriptomics
 * [Running Telescope](telescope.md)
-#### [Transcriptomics](../tree/master/Transcriptomics)
+#### [Transcriptomics](/tree/master/Transcriptomics)
 * [Gene expression](gene_expression.md)
 * [Differential expression](differential_expression.md)
 * [Volcano plots](volcano.md)
