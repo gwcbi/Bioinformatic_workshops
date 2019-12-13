@@ -61,4 +61,6 @@ ggplot(genes, aes(x = log2FoldChange, y = -log10(pvalue))) +
 ```
 And We can save the plot by executing the command:
 
+```
 ggsave("VolcanoPlot.png", plot = last_plot(), height = 10, width=15, device = "png", dpi = 500, limitsize = FALSE)
+```
