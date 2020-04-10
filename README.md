@@ -14,7 +14,7 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 #### Understanding DNA, alignments, and Phylogenies
 * [Understanding Sequence Data and using BLAST](blast.md)
 * [Create a multiple sequence alignment](align.md)
-* [Select a model of evolution](model.md)
+* [Select a model of evolution](modeltest.md)
 * [Estimate a phylogeny](phylogeny.md)
 #### Metagenomics
 * [Assessing read quality of NGS reads](QC.md)
