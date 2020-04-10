@@ -14,3 +14,6 @@ We can use likelihood ratio tests (LRTs) or information criterion (BIC, AIC or A
 
 ## Which model selection tool should I use?
 Popular tools jModeltest and ProtTest have been reimplemented as ModelTest-NG, which we will introduce here. IQ-TREE also has a popular model selection feature called ModelFinder known for its algorithmic and computational efficiency, and SMS was recently released which uses heuristic strategies to avoid evaluating the ful set of candidate models.   
+
+## ModelTest-NG
+[Here](https://academic.oup.com/mbe/article/37/1/291/5552155) is a link to the paper introducing ModelTest-NG, and here is the [manual](http://www.phylo.org/system/expressionengine/uploads/modeltest_ng_manual.pdf).
