@@ -32,8 +32,8 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 ## Exercises:
 
 * [Suspicious sushi]()
-* [CoVID19](covid19.md)
-* [Arkansas crayfish](crayfish.md)
+* [CoVID19](exercises/covid19.md)
+* [Arkansas crayfish](exercises/crayfish.md)
 
 
 ## Past workshops:
