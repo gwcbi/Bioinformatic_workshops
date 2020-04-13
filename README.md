@@ -19,21 +19,23 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 #### Metagenomics
 * [Assessing read quality of NGS reads](QC.md)
 * [Cleaning NGS reads](cleanreads.md)
-* [Running PathoScope for Microbiome Characterization](pathoscope.md)
-#### Retrotranscriptomics
-* [Running Telescope](telescope.md)
+
 #### [Transcriptomics](https://github.com/gwcbi/Workshops/tree/master/Transcriptomics)
 * [Gene expression](gene_expression.md)
 * [Differential expression](differential_expression.md)
 * [Volcano plots](https://github.com/gwcbi/Workshops/tree/master/Transcriptomics/volcano.md)
 
-
-
 ## Exercises:
-
 * [Suspicious sushi]()
 * [CoVID19](exercises/covid19.md)
 * [Arkansas crayfish](exercises/crayfish.md)
+
+## Demos:
+#### Retrotranscriptomics
+* [Running Telescope](telescope.md)
+
+#### Metagenomics
+* [Running PathoScope for Microbiome Characterization](pathoscope.md)
 
 
 ## Past workshops:
