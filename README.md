@@ -11,6 +11,8 @@ Welcome to the George Washington Computational Biology Institute's bioinformatic
 * Making scripts and running interactive jobs
 * Regular Expressions
 * Snakemake or workflows
+* Introduction to transcriptomics
+* Introduction to metagenomics
 #### Understanding DNA, alignments, and Phylogenies
 * [Understanding Sequence Data and using BLAST](blast.md)
 * [Create a multiple sequence alignment](align.md)
