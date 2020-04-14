@@ -8,6 +8,7 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 ## Modules: 
 #### [Introductory skills](https://github.com/gwcbi/Workshops/tree/master/IntroductorySkills)
 * Using bash
+* Understanding file structure
 * Working with conda
 * Using R and RStudio
 * Using github
