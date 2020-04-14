@@ -26,6 +26,10 @@ BLAST stands for Basic Local Alignment Search Tool. BLAST allows you to query th
 1. Scroll down to the bottom of the page and click the blue `BLAST` button. You can change the settings, but for our case, the default settings work well.
 2. After a few minutes, you should get an output similar to below. The first line gives the description of the closest match to your sequence. In the second to last column, you can see the percent identity. In this case, the first sequence listed here is 100% similar to our sequence.<br/>
 ![BLAST1](images/BLAST1.png)
+3. Click on the accession number, listed in the last column. Here you can see much more information. What gene is this from? What other information can you see?
+![BLAST2](images/BLAST2.png)
+4. To download the sequence, click on the fasta button on the top left. Then click `send to` then `file` then set the format as `fasta`.
+![BLAST3](images/BLAST3.png)
 
 *For more information about using BLAST, see the [BLAST topic page](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp)*
 ## How do I search for a specific sequence or gene using NCBI?
