@@ -43,6 +43,9 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 #### Metagenomics
 * [Running PathoScope for Microbiome Characterization](pathoscope.md)
 
+#### HAPHPIPE
+* [Running HAPHPIPE](https://gwcbi.github.io/haphpipe_docs/demos/)
+
 
 ## Past workshops:
 
