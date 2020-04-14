@@ -24,8 +24,7 @@ When you generate your own sequences using illumina, sequences are often in fast
 BLAST stands for Basic Local Alignment Search Tool. BLAST allows you to query the NCBI database to find similar sequences.
 0. Copy the sequence above and paste into the [BLAST browser](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastSearch).
 1. Scroll down to the bottom of the page and click the blue `BLAST` button. You can change the settings, but for our case, the default settings work well.
-2. After a few minutes, you should get an output similar to below. The first line gives the description of the closest match to your sequence. In the second to last column, you can see the percent identity. In this case, the first sequence listed here is 100% similar to our sequence.
-<br/>
+2. After a few minutes, you should get an output similar to below. The first line gives the description of the closest match to your sequence. In the second to last column, you can see the percent identity. In this case, the first sequence listed here is 100% similar to our sequence.<br/>
 ![BLAST1](images/BLAST1.png)
 
 *For more information about using BLAST, see the [BLAST topic page](https://blast.ncbi.nlm.nih.gov/Blast.cgi?CMD=Web&PAGE_TYPE=BlastDocs&DOC_TYPE=BlastHelp)*
