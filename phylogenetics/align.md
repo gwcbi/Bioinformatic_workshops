@@ -116,3 +116,5 @@ echo "[---$SN---] ($(date)) $SN COMPLETE."
 
 ```
 <br/>
+
+*This module contributed to CBI Workshops by Dr. Keylie Gibson*
