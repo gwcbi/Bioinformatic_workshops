@@ -30,7 +30,7 @@ Remember, the [HPC guide](https://gwcbi.github.io/HPC/) also exists as a resourc
 * [Volcano plots](https://github.com/gwcbi/Workshops/tree/master/Transcriptomics/volcano.md)
 
 ## Exercises:
-* [Suspicious sushi]()
+* [Suspicious sushi](sushi.md)
 * [CoVID19](exercises/covid19.md)
 * [Arkansas crayfish](exercises/crayfish.md)
 
