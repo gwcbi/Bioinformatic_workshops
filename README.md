@@ -1,6 +1,8 @@
 # GW CBI Workshops
 Welcome to the George Washington Computational Biology Institute's bioinformatic workshops page. Select one or more of the following workshop modules and use the [workshop template](workshop_template.md) to set up a workshop. Workshop modules should take no more than 30 minutes to complete and include questions to make the attendee think about processes and a small amount of data.
 
+Here is the link to the [non-github website version](https://gwcbi.github.io/Workshops/). To create a workshop, copy the text from workshop template to a new markdown file, replace the text with links to the following modules, and put the link on this page. You should be able to access the content in a website-friendly way.
+
 Remember, the [HPC guide](https://gwcbi.github.io/HPC/) also exists as a resource.
 
 Here are [guidelines](guidelines.md) for adding content to the github page.
