@@ -24,7 +24,7 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 * [Select a model of evolution](phylogenetics/modeltest.md)
 * [Estimate a phylogeny](phylogenetics/phylogeny.md)
 #### Metagenomics
-* [Assessing read quality of NGS reads](QC.md)
+* [Assessing read quality of NGS reads](QC.md) (Hayley)
 * [Cleaning NGS reads](cleanreads.md)
 
 #### Transcriptomics
