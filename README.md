@@ -16,10 +16,10 @@ Remember, the [HPC guide](https://gwcbi.github.io/HPC/) also exists as a resourc
 * Introduction to transcriptomics
 * Introduction to metagenomics
 #### Understanding DNA, alignments, and Phylogenies
-* [Understanding Sequence Data and using BLAST](blast.md)
-* [Create a multiple sequence alignment](align.md)
-* [Select a model of evolution](modeltest.md)
-* [Estimate a phylogeny](phylogeny.md)
+* [Understanding Sequence Data and using BLAST](phylogenetics/blast.md)
+* [Create a multiple sequence alignment](phylogenetics/align.md)
+* [Select a model of evolution](phylogenetics/modeltest.md)
+* [Estimate a phylogeny](phylogenetics/phylogeny.md)
 #### Metagenomics
 * [Assessing read quality of NGS reads](QC.md)
 * [Cleaning NGS reads](cleanreads.md)
