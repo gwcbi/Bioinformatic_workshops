@@ -38,7 +38,7 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 
 ## Demos:
 #### Retrotranscriptomics
-* [Running Telescope](telescope.md)
+* [Running Telescope](https://github.com/gwcbi/Workshops/blob/master/telescopeDemo/README.md)
 
 #### Metagenomics
 * [Running PathoScope for Microbiome Characterization](pathoscope.md)
