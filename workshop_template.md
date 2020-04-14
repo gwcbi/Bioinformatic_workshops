@@ -22,7 +22,7 @@ Do you need a computer? What skill level is expected? Do you need to register fi
 #### Day 1
 9:00-10:00am : [Introduction and first topic](link.to.module)
 
-10:00-11:00am : [Next topic](link.to.module)
+10:00-11:00am : [Understanding Sequence Data and using BLAST](phylogenetics/blast.md)
 
 11:00-12:00pm : [Next topic](link.to.module)
 
@@ -31,6 +31,7 @@ Do you need a computer? What skill level is expected? Do you need to register fi
 ## Other important links
 * [first important link](firstlink)
 * [other important link](nextlink)
+* [HPC guide](https://gwcbi.github.io/HPC/)
 
 ## Workshop materials
 * [Link to powerpoint etc](powerpoint.pdf)
