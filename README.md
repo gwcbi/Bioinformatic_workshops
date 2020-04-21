@@ -28,6 +28,9 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 #### Metagenomics
 * [Assessing read quality of NGS reads](QC.md) (Hayley)
 * [Cleaning NGS reads](cleanreads.md)
+* [16S sample inference using DADA2]
+* [Functional analysis using HUMANN2]
+
 
 #### Transcriptomics
 * Gene expression
