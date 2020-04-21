@@ -1,6 +1,10 @@
 # Guidelines for adding content to our workshops
 Please help us add content to any of these topics that you have expertise or would like to get expertise in!
 
+For modules that teach material that is not our own, include links to the documentation or to the tutorial from the software.
+
+If you create a workshop from scratch, include "*This module contributed to CBI Workshops by Your Name*" at the bottom, so we can give credit to your hard work. 
+
 As a review, Workshops are composed of modules, exercises and demos.
 
 ## Workshops
