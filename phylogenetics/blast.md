@@ -58,6 +58,7 @@ This is *Anax junius*, one of the most beautiful dragonflies in North America. D
 
 ## How do I search for a specific sequence or gene using NCBI?
 NCBI also allows you to find sequences from specific genes or organisms. 
+For example, imagine we want to ask if this species of dragonfly . 
 4. To download the sequence, click on the fasta button on the top left. Then click `send to` then `file` then set the format as `fasta`.
 ![BLAST3](images/BLAST3.png)
 
