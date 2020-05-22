@@ -2,29 +2,33 @@
 
 ### GOALS
 
-1.) Understand NGS data format and quality scores
-2.) Perform quality checks on NGS data 
-3.) Learn about quality assessment in NGS reads
+1.) Understand NGS data format and quality scores <br>
+
+2.) Perform quality checks on NGS data <br>
+
+3.) Learn about quality assessment in NGS reads <br>
 
 ## NGS Data and Quality
 When observing sanger sequencing data, we can very easily assess quality by viewing chromatograms and manually trimming and editing sequences.
 
-[QC_01](QC_01.png) 
+![alt text](QC_01.png) 
 *Sanger sequencing data chromatograms. You can easily determine quality sequences and trim by hand.*
 
 However, NGS produces millions of sequences that can’t be viewed manually. So how can we determine the quality of our NGS reads? 
 
 First, let's look at some NGS data. Many NGS reads are delivered from sequencers in `.fastq` format. the `.fastq` format looks like this:
+
 ```
 @SRR2584863.1 HWI-ST957:244:H73TDADXX:1:1101:4712:2181/1
 >TTCACATCCTGACCATTCAGTTGAGCAAAATAGTTCTTCAGTGCCTGTTTAACCGAGTCACGCAGGGGTTTTTGGGTTACCTGATCCTGAGAGTTAACGGTAGAAACGGTCAGTACGTCAGAATTTACGCGTTGTTCGAACATAGTTCTG
 >+
 >CCCFFFFFGHHHHJIJJJJIJJJIIJJJJIIIJJGFIIIJEDDFEGGJIFHHJIJJDECCGGEGIIJFHFFFACD:BBBDDACCCCAA@@CA@C>C3>@5(8&>C:9?8+89<4(:83825C(:A#########################
 ```
-1.) The first line contains an @, followed by identification information. This first line will vary depending on sequencing platform, sequencing run, and individual sequence information.
-2.) The second line contains the actual sequence generated
+1.) The first line contains an @, followed by identification information. This first line will vary depending on sequencing platform, sequencing run, and individual sequence information. <br>
 
-> Reflection
+2.) The second line contains the actual sequence generated. <br>
+
+> Reflection: <br>
 > Assuming this was an Illumina sequencing run, did this sequence come from a 75, 150, or 300 cycle kit? Why?
 
 3.) The third line contains the read quality information and is based on the following scale (! being the lowest quality, and ~ being the highest quality):
@@ -32,7 +36,7 @@ First, let's look at some NGS data. Many NGS reads are delivered from sequencers
 ```
 !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
 ```
-> Reflection
+> Reflection: <br>
 > Where are the lowest quality bases located? Why do you think this is?
 
 Now, we could easily interpret the quality of this sequence by hand, but again, NGS is producing millions (or up to billions!) of these reads, so we can't visually inspect them. Instead, we have to rely on software programs to scan our sequence files and give us easy to read quality reports. 
@@ -70,11 +74,15 @@ Once the program has finished running, two sets of files will be generated for e
 
 This is easy enough, but having a more comprehensive output is much more useful for interpreting patterns across many samples. We can use [MultiQC](https://multiqc.info/) (Ewells et al. 2016) for this. This program will take all of our FastQC outputs for every sample and create a single report that is interactive. 
 
-To run:
-1.) Install locally, using Pypl, Bioconda, or utilize within GALAXY. 
-2.) Navigate to your `FastQC.zip` directory (not the `.html` directory)
-3.) Run MultiQC
-`multiqc .`
+To run: 
+
+1.) Install locally, using Pypl, Bioconda, or utilize within GALAXY. <br>
+
+2.) Navigate to your `FastQC.zip` directory (not the `.html` directory) <br>
+
+3.) Run MultiQC <br>
+
+`multiqc .` <br>
 
 4.) That's it! You will generate a MultiQC directory that contains tab-delimited information, but the easiest way to navigate your output is to view the `multiqc_report.html`. 
 
@@ -82,17 +90,17 @@ To run:
 
 FastQC reports contain the following results about sequence quality:
 
-##### Basic Statistics
-##### Per base sequence quality
-##### Per sequence quality scores
-##### Per base sequence content
-##### Per sequence GC content
-##### Per base N content
-##### Sequence Length Distribution
-##### Sequence Duplication Levels
-##### Overrepresented sequences
-##### Adapter Content
-##### Kmer Content
+#### Basic Statistics
+#### Per base sequence quality
+#### Per sequence quality scores
+#### Per base sequence content
+#### Per sequence GC content
+#### Per base N content
+#### Sequence Length Distribution
+#### Sequence Duplication Levels
+#### Overrepresented sequences
+#### Adapter Content
+#### Kmer Content
 
 Now that we have run our QC programs, we need to be able to interpret the results. Running QC is useless if we don't understand what the results mean and what they mean for our data.
 For example, FasQC and MultiQC will bin the results as normal (green tick), slightly abnormal (orange triangle) or very unusual (red cross). What does normal even *MEAN?*
@@ -107,9 +115,11 @@ Information about input FASTQ file name, type, and encoding. Also contains the n
 ### PER BASE SEQUENCE QUALITY
 A box-and-whisker plot indicating the quality (Q-scores) of each base in your reads. The X-axis represents the position of each base (dependent on your read lengths) and the Y-axis indicates the quality score. 
 
-1.) Green indicates Q-scores ≥ 28
-2.) Yellow indicates Q-scores between 22 and 28
-3.) Red indicates Q-scores less than 22
+1.) Green indicates Q-scores ≥ 28 <br>
+
+2.) Yellow indicates Q-scores between 22 and 28 <br>
+
+3.) Red indicates Q-scores less than 22 <br>
 
 Yellow boxes indicate the 25th and 75th percentile, and the whiskers represent the 10th and 90th percentile.
 The red line indicates the median score, and the blue line represents the mean. 
@@ -117,10 +127,10 @@ The red line indicates the median score, and the blue line represents the mean.
 ##### What should they look like?
 Typically, you want to see most of your data with Q-scores ≥ 28. However, most Illumina data will have a noticeable decrease in quality towards the end of the reads. Tjis is typically due to exhaustion of resources in sequencing.
 
-[QC_02](QC_02.png)
+![alt text](QC_02.png)
 *Example of quality scores*
 
->Reflection
+>Reflection: <br>
 > How can poor sequence quality indicate problems in sequencing or your library prep?
 
 ### PER SEQUENCE QUALITY SCORES
@@ -135,13 +145,13 @@ A plot that exhibits the proportion of each base sequenced in all reads. The X-a
 ##### What should they look like?
 This is a major area where different library types will reflect different charts and different distinction of "passing" by FastQC. 
 
-[QC_03](QC_03.png)
+![alt text](QC_03.png)
 *Example of per base sequence content from an amplicon sequencing library.*
 
-[QC_04](QC_04.png)
+![alt text](QC_04.png)
 *Example of per base sequence content from a whole shotgun sequencing library.*
 
-[QC_05](QC_05.png)
+![alt text](QC_05.png)
 *Example of per base sequence content from an RNA-Seq library.*
 
 ### PER SEQUENCE GC CONTENT
@@ -186,11 +196,16 @@ Small RNA libraries typically consist of a relatively small set of unique, short
 
 Expected results are:
 
-Extremely biased per base sequence content
-Extremely narrow distribution of GC content
-Very high sequence duplication levels
-Abundance of overrepresented sequences
-Read through into adapters
+Extremely biased per base sequence content <br>
+
+Extremely narrow distribution of GC content <br>
+
+Very high sequence duplication levels <br>
+
+Abundance of overrepresented sequences <br>
+
+Read through into adapters <br>
+
 [Small RNA library FastQC report](SmallRNASeq_R1_001_fastqc.html)
 
 #### AMPLICON/METAGENOMICS
@@ -198,11 +213,16 @@ Amplicon libraries are prepared by PCR amplification of a specific target, for e
 
 Expected results are:
 
-Extremely biased per base sequence content
-Extremely narrow distribution of GC content
-Very high sequence duplication levels
-Abundance of overrepresented sequences
-In cases where the PCR target is shorter than the read length, the sequence will read through into adapters
+Extremely biased per base sequence content <br>
+
+Extremely narrow distribution of GC content <br>
+
+Very high sequence duplication levels <br>
+
+Abundance of overrepresented sequences <br>
+
+In cases where the PCR target is shorter than the read length, the sequence will read through into adapters <br>
+
 [Amplicon library FastQC report](AmpliconSeq_R1_001_fastqc.html)
 
 #### BISULFITE-SEQ/BS-SEQ/METHYL-SEQ
@@ -210,8 +230,10 @@ Bisulfite (methyl) Seq libraries have had the majority of the cytosine (C) bases
 
 Expected results:
 
-Biased per base sequence content
-Biased per sequence GC content
+Biased per base sequence content <br>
+
+Biased per sequence GC content <br>
+
 [BS-Seq library FastQC report](MethylSeq_R1_001_fastqc.html)
 
 #### ADAPTER DIMER CONTAMINATION
@@ -219,10 +241,16 @@ Any library type may contain a very small percentage of adapter dimer (i.e. no i
 
 Expected observations with adapter dimer contamination:
 
-Drop in per base sequence quality after base 60
-Possible bi-modal distribution of per sequence quality scores
-Distinct pattern observed in per bases sequence content up to base 60
-Spike in per sequence GC content
-Overrepresented sequence matching adapter
-Adapter content > 0% starting at base 1
+Drop in per base sequence quality after base 60 <br>
+
+Possible bi-modal distribution of per sequence quality scores <br>
+
+Distinct pattern observed in per bases sequence content up to base 60 <br>
+
+Spike in per sequence GC content <br>
+
+Overrepresented sequence matching adapter <br>
+
+Adapter content > 0% starting at base 1 <br>
+
 [Adapter dimer containing library FastQC report](AdapterDimer_R1_001_fastqc 2.html)
