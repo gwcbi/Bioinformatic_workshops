@@ -253,4 +253,6 @@ Overrepresented sequence matching adapter <br>
 
 Adapter content > 0% starting at base 1 <br>
 
-[Adapter dimer containing library FastQC report](AdapterDimer_R1_001_fastqc 2.html)
+[Adapter dimer containing library FastQC report](AdapterDimer_R1_001_fastqc.html)
+
+
