@@ -22,6 +22,7 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 * Introduction to metagenomics
 #### Understanding DNA, alignments, and Phylogenies
 * [Understanding Sequence Data and using BLAST](phylogenetics/blast.md)
+* [Using geneious](phylogenetics/geneious.md) to prepare sanger sequences for downstream analysis
 * Create a multiple sequence alignment on [command line](phylogenetics/align.md) or on the [mafft website](phylogenetics/mafft.md)
 * [Select a model of evolution](phylogenetics/modeltest.md)
 * [Estimate a phylogeny](phylogenetics/phylogeny.md)
