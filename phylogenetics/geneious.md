@@ -35,4 +35,4 @@ You can see that the quality goes up when both sequences are represented and the
 
 ![geneious5](images/geneious5.png)
 
-Congratulations! You have successfully prepared your sanger sequences and can now [blast](phylogenetics/blast.md) them or [align](phylogenetics/align.md) them.
+Congratulations! You have successfully prepared your sanger sequences and can now [blast](../blast.md) them or [align](../align.md) them.
