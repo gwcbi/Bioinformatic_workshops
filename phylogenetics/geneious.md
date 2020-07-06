@@ -12,7 +12,7 @@ Geneious is a paid software that is probably the best there is for visualizing, 
   
 ![geneious1](images/geneious1.png)
 
-Each nucleotide is represented by a different color peak. Sequences also each have a high quality score for how confident the nucleotide calls are. You can see that score in the HQ% column. The color of the letter indicates how confident the call is, with lighter blue being more confident.
+Each nucleotide is represented by a different color peak. The color of the letter indicates how confident the call is, with lighter blue being more confident and darker blue being less confident. Sequences also each have a high quality score for how confident all the nucleotide calls are. You can see that score in the HQ% column. 
 </details>
 
 1) Select the forward and reverse sequences, click "Align/assemble", then select "De novo assemble". Use the default settings (unless you want something specific) then press OK.
@@ -23,7 +23,8 @@ Each nucleotide is represented by a different color peak. Sequences also each ha
   <summary>Click here to see what the assembled contig looks like</summary>
   
 ![geneious3](images/geneious3.png)
-You can see that the quality goes up when both sequences are represented and there is more light blue colored nucleotides.
+
+You can see that the quality goes up when both sequences are represented and there are more light blue colored nucleotides.
 </details>
 
 2) Next, extract the consensus sequence by clicking the blue extract button.
