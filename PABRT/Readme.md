@@ -1,7 +1,7 @@
 # University of Puerto Rico in Ponce PABRT Training Course - Microbiome Workshop
 Date: March 11, 2021
 
-Time: noon - 5 pm, EST
+Time: noon - 5 pm, Puerto Rico time (GMT-4)
 
 Location: Zoom, check email for Zoom link
 
