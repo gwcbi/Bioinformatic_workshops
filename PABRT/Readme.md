@@ -32,7 +32,7 @@ You will need a computer with QIIME2 installed and an internet connection to dow
 3:00-5:00pm : [Independent Work on Hypothesis Testing]
 
 ## Other important links
-* [Metadata File](/Data)
+* [Metadata Files](https://github.com/gwcbi/Workshops/tree/master/PABRT/Data)
 
 ## Workshop materials
 * [Link to powerpoint etc](powerpoint.pdf)
