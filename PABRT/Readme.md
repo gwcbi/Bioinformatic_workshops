@@ -13,25 +13,26 @@ Location: Zoom, check email for Zoom link
 Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 
 ### Learning Objectives
-Here is what we will learn
+How to produce taxon tables from QIIME2 (https://qiime2.org/)
+How to import taxon tables into MicrobiomeAnalyst (https://www.microbiomeanalyst.ca/)
+How to calculate alpha-diversity, beta-diversity, etc.
+How to test for associations of diversity measures and metadata features
 
 ### Requirements
-Do you need a computer? What skill level is expected? Do you need to register first?
+You will need a computer with QIIME2 installed and an internet connection to download data files and access MicobiomeAnalyst.
 
 ## Schedule
 #### Day 1
-9:00-10:00am : [Introduction and first topic](link.to.module)
+12:00-1:00pm : [Introduction to QIIME2 - taxon table production]
 
-10:00-11:00am : [Understanding Sequence Data and using BLAST](phylogenetics/blast.md)
+1:00-2:00pm : [Introduction to MicrobiomeAnalyst]
 
-11:00-12:00pm : [Next topic](link.to.module)
+2:00-3:00pm : [Statistical Features of Microbiome Diversity]
 
-12:00-1:00pm : Lunch break
+3:00-5:00pm : [Independent Work on Hypothesis Testing]
 
 ## Other important links
-* [first important link](firstlink)
-* [other important link](nextlink)
-* [HPC guide](https://gwcbi.github.io/HPC/)
+* [Metadata File](firstlink)
 
 ## Workshop materials
 * [Link to powerpoint etc](powerpoint.pdf)
