@@ -15,8 +15,8 @@ Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 ### Learning Objectives
 * How to produce taxon tables from QIIME2 (https://qiime2.org/)
 * How to import taxon tables into MicrobiomeAnalyst (https://www.microbiomeanalyst.ca/)
-How to calculate alpha-diversity, beta-diversity, etc.
-How to test for associations of diversity measures and metadata features
+* How to calculate alpha-diversity, beta-diversity, etc.
+* How to test for associations of diversity measures and metadata features
 
 ### Requirements
 You will need a computer with QIIME2 installed and an internet connection to download data files and access MicobiomeAnalyst.
