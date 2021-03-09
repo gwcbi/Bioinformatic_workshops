@@ -1,18 +1,19 @@
 # University of Puerto Rico in Ponce PABRT Training Course - Microbiome Workshop
+---
 Date: March 11, 2021
 
 Time: noon - 5 pm, Puerto Rico time (GMT-4)
 
 Location: Zoom, check email for Zoom link
 
-### Organizers or instructors
+## Organizers or instructors
 * [Keith Crandall](https://publichealth.gwu.edu/departments/biostatistics-and-bioinformatics/keith-crandall)
 * [Marcos Pérez-Losada](https://publichealth.gwu.edu/departments/biostatistics-and-bioinformatics/marcos-perez-losada)
 
 
 Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 
-### Learning Objectives
+## Learning Objectives
 * How to produce taxon tables from QIIME2 (https://qiime2.org/)
  * QIIME2 Tutorial (https://docs.qiime2.org/2021.2/tutorials/moving-pictures/)
 * How to import taxon tables into MicrobiomeAnalyst (https://www.microbiomeanalyst.ca/)
@@ -20,11 +21,11 @@ Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 * How to calculate alpha-diversity, beta-diversity, etc.
 * How to test for associations of diversity measures and metadata features
 
-### Requirements
+## Requirements
 You will need a computer with QIIME2 installed and an internet connection to download data files and access MicobiomeAnalyst.
 
 ## Schedule
-#### Day 1
+
 12:00-1:00pm : [Introduction to QIIME2 - taxon table production]
 
 1:00-2:00pm : [Introduction to MicrobiomeAnalyst]
