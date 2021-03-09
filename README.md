@@ -14,6 +14,7 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 * Working with conda
 * Using R and RStudio
 * Using github
+* Markdown
 * High-Performance computing
 * Making scripts and running interactive jobs
 * Regular Expressions
