@@ -15,7 +15,6 @@ Here are [guidelines](guidelines.md) for adding content to the github page.
 * Using R and RStudio
 * Using github
 * Using Markdown
-* Markdown
 * High-Performance computing
 * Making scripts and running interactive jobs
 * Regular Expressions
