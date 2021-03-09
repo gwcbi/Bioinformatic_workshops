@@ -3,6 +3,7 @@
 ### Working with conda
 ### Using R and RStudio
 ### Using github
+### [Using Markdown](https://guides.github.com/features/mastering-markdown/)
 ### High-Performance computing
 ### Making scripts and running interactive jobs
 ### Regular Expressions
