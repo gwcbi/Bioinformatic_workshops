@@ -14,7 +14,9 @@ Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 
 ### Learning Objectives
 * How to produce taxon tables from QIIME2 (https://qiime2.org/)
+* - QIIME2 Tutorial (https://docs.qiime2.org/2021.2/tutorials/moving-pictures/)
 * How to import taxon tables into MicrobiomeAnalyst (https://www.microbiomeanalyst.ca/)
+* - MicrobiomeAnalyst Tutorial (https://www.microbiomeanalyst.ca/MicrobiomeAnalyst/resources/tutorials/MDP_update.pdf)
 * How to calculate alpha-diversity, beta-diversity, etc.
 * How to test for associations of diversity measures and metadata features
 
@@ -35,5 +37,5 @@ You will need a computer with QIIME2 installed and an internet connection to dow
 * [Metadata Files](https://github.com/gwcbi/Workshops/tree/master/PABRT/Data)
 
 ## Workshop materials
-* [Link to powerpoint etc](powerpoint.pdf)
+* [Crandall powerpoint as pdf](Workshops/PABRT/CrandallTalk.pdf)
 
