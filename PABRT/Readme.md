@@ -26,13 +26,13 @@ You will need a computer with QIIME2 installed and an internet connection to dow
 
 ## Schedule
 
-12:00-1:00pm : [Introduction to QIIME2 - taxon table production]
+12:00-1:00pm : Introduction to QIIME2 - taxon table production
 
-1:00-2:00pm : [Introduction to MicrobiomeAnalyst]
+1:00-2:00pm : Introduction to MicrobiomeAnalyst
 
-2:00-3:00pm : [Statistical Features of Microbiome Diversity]
+2:00-3:00pm : Statistical Features of Microbiome Diversity
 
-3:00-5:00pm : [Independent Work on Hypothesis Testing]
+3:00-5:00pm : Independent Work on Hypothesis Testing
 
 ## Other important links
 * [Metadata Files](https://github.com/gwcbi/Workshops/tree/master/PABRT/Data)
