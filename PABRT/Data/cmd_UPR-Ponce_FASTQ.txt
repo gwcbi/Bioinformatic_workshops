@@ -1,0 +1,223 @@
+## Load and execute QIIME2
+
+conda activate qiime2-2020.11 # to activate qiime2
+conda deactivate # to deactivate qiime2
+qiime --help
+
+# import data using fastq manifest file
+
+qiime tools import \
+  --type 'SampleData[PairedEndSequencesWithQuality]' \
+  --input-path UPR-Ponce_FASTQ.txt \
+  --output-path demux.qza \
+  --input-format PairedEndFastqManifestPhred33V2
+  
+# Check import
+
+qiime tools peek demux.qza
+
+## Generate a summary of the demultiplexing results:
+
+qiime demux summarize --i-data demux.qza --o-visualization demux.qzv
+
+# View results
+
+The output is a .qzv file which contains plots that can be visualised at https://view.qiime2.org/
+In the "Interactive Quality Plot" it is possible to see the values needed for the next step
+Results can also be visualized using:
+
+qiime tools view demux.qzv
+
+## Sequence quality control and feature table construction using Dada2
+#For this step we need to see the parameters in the "Interactive Quality Plot" (demux.qzv): --p-trim-left m, which trims off the first m bases of each sequence, and --p-trunc-len n which truncates each sequence at position n
+# If --p-n-threads 0 all available cores will be used
+
+qiime dada2 denoise-paired \
+--i-demultiplexed-seqs demux.qza \
+--p-trunc-len-f 290 \
+--p-trunc-len-r 290 \
+--p-trim-left-f 20 \
+--p-trim-left-r 0 \
+--o-representative-sequences rep-seqs.qza \
+--o-table table.qza \
+--o-denoising-stats stats.qza \
+--p-n-threads 0 \
+--verbose
+  
+qiime metadata tabulate \
+  --m-input-file stats.qza \
+  --o-visualization stats.qzv
+  
+# FeatureTable and FeatureData summaries:
+
+qiime feature-table summarize \
+  --i-table table.qza \
+  --o-visualization table.qzv \
+  --m-sample-metadata-file metadata_UPR-Ponce_FASTQ.txt
+  
+qiime feature-table tabulate-seqs \
+  --i-data rep-seqs.qza \
+  --o-visualization rep-seqs.qzv
+
+qiime tools view table.qzv
+qiime tools view rep-seqs.qzv
+
+## Generate rooted and unrooted trees for phylogenetic diversity analyses:
+
+qiime phylogeny align-to-tree-mafft-fasttree \
+  --i-sequences rep-seqs.qza \
+  --o-alignment aligned-rep-seqs.qza \
+  --o-masked-alignment masked-aligned-rep-seqs.qza \
+  --o-tree unrooted-tree.qza \
+  --p-n-threads auto \
+  --o-rooted-tree rooted-tree.qza
+
+# if you have an alignment already you can import it to qiime2
+
+# Alpha and beta diversity analysis
+# --p-sampling-depth must >500
+
+qiime diversity core-metrics-phylogenetic \
+  --i-phylogeny rooted-tree.qza \
+  --i-table table.qza \
+  --p-sampling-depth 125 \
+  --m-metadata-file metadata_UPR-Ponce_FASTQ-selected.txt \
+  --output-dir core-metrics-results
+ 
+qiime tools view core-metrics-results/unweighted_unifrac_emperor.qzv
+
+# Test for associations between categorical metadata and Phylogenetic Diversity
+
+qiime diversity alpha-group-significance \
+  --i-alpha-diversity core-metrics-results/faith_pd_vector.qza \
+  --m-metadata-file metadata_UPR-Ponce_FASTQ-selected.txt \
+  --o-visualization core-metrics-results/faith-pd-group-significance.qzv
+ 
+qiime tools view core-metrics-results/faith-pd-group-significance.qzv 
+
+# PERMANOVA test using unweighted_unifrac_distances for body-site
+
+qiime diversity beta-group-significance \
+  --i-distance-matrix core-metrics-results/unweighted_unifrac_distance_matrix.qza \
+  --m-metadata-file metadata_UPR-Ponce_FASTQ-selected.txt \
+  --m-metadata-column body-site \
+  --o-visualization core-metrics-results/unweighted-unifrac-body-site-significance.qzv \
+  --p-pairwise
+
+qiime tools view core-metrics-results/unweighted-unifrac-body-site-significance.qzv
+
+# Taxonomic analysis with pre-trained Silva-based 16S classifier
+# See instructions in Training feature classifiers with q2-feature-classifier
+
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifiers/silva-138-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification silva_taxonomy.qza
+
+qiime metadata tabulate \
+  --m-input-file silva_taxonomy.qza \
+  --o-visualization silva_taxonomy.qzv
+
+qiime tools view silva_taxonomy.qzv
+
+# Taxonomic analysis with pre-trained Greengenes 16S classifier
+
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifiers/gg-13-8-99-515-806-nb-classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification gg_taxonomy.qza
+
+qiime metadata tabulate \
+  --m-input-file gg_taxonomy.qza \
+  --o-visualization gg_taxonomy.qzv
+
+qiime tools view gg_taxonomy.qzv
+
+qiime taxa barplot \
+  --i-table table.qza \
+  --i-taxonomy silva_taxonomy.qza \
+  --m-metadata-file metadata_UPR-Ponce_FASTQ.txt \
+  --o-visualization taxa-bar-plots.qzv
+
+qiime tools view taxa-bar-plots.qzv
+
+# Differential abundance testing with ANCOM: identify features that are differentially abundant across sample groups
+# See tutorial
+  
+## Export a feature table
+qiime tools export --input-path table.qza --output-path exported
+#change the name to table.biom
+biom convert -i exported/table.biom -o exported/table.txt --to-tsv
+
+## Export taxonomy table
+qiime tools export --input-path silva_taxonomy.qza --output-path exported
+qiime tools export --input-path gg_taxonomy.qza --output-path exported
+#change the 1st line of 1st column to #OTU ID 
+
+## Add taxonomy to the biom table
+biom add-metadata -i exported/table.biom -o exported/gg_table-tax.biom --observation-metadata-fp exported/gg_taxonomy.tsv --sc-separated Taxon
+
+biom convert -i exported/gg_table-tax.biom -o exported/gg_table-tax.txt --to-tsv --header-key Taxon 
+#since silva database includes Archae, Eukarya, chloroplast and mitochondria, delete those already from the table
+#also delete the "unassigned"
+#change "Taxon" to "taxonomy"
+
+biom convert -i exported/table-tax.txt -o exported/table-tax_v1.biom --to-hdf5 --table-type="OTU table" --process-obs-metadata taxonomy
+
+## Export the midpoint rooted tree
+qiime tools export --input-path unrooted-tree.qza  --output-path exported
+#change the name to unrooted-tree.nwk
+qiime tools export --input-path rooted-tree.qza  --output-path exported
+#change the name to rooted-tree.nwk
+
+## Training feature classifiers with q2-feature-classifier
+
+# Obtaining and importing reference data sets
+
+# Option 1: upload reference sequences and the corresponding taxonomic classifications
+# Files ready to use in QIIME2 can be downloaded here: https://www.arb-silva.de/download/archive/qiime
+
+qiime tools import \
+  --type 'FeatureData[Sequence]' \
+  --input-path /Software/QIIME2/SILVA_132_QIIME_release/silva_132_99_16S.fna \
+  --output-path silva_132_99_16S.qza
+
+qiime tools import \
+  --type 'FeatureData[Taxonomy]' \
+  --input-format HeaderlessTSVTaxonomyFormat \
+  --input-path /Software/QIIME2/SILVA_132_QIIME_release/taxonomy_all_levels.txt \
+  --output-path silva_132_99_16S_tax.qza
+
+# Option 2: use pre-formatted SILVA reference sequence and taxonomy files here that were processed using RESCRIPt from https://docs.qiime2.org/2020.11/data-resources/
+  
+# Extract reference reads
+# Use --p-trunc-len 150 and adjust to the length of the sequence reads that we’re trying to classify is single-ends reads
+# Do not use --p-trunc-len if classifying pair-ends reads
+# These are the primers used for this study
+# Expected and observed PCR product size is ~450bp.
+
+qiime feature-classifier extract-reads \
+  --i-sequences silva_132_99_16S.qza \
+  --p-f-primer AACGCGAAGAACCTTAC \
+  --p-r-primer CGGGTGTGTACAAGGCCCGGGAACG \
+  --p-min-length 100 \
+  --p-max-length 400 \
+  --o-reads ref-seqs.qza
+
+# Train a Naive Bayes classifier
+
+qiime feature-classifier fit-classifier-naive-bayes \
+  --i-reference-reads ref-seqs.qza \
+  --i-reference-taxonomy silva_132_99_16S_tax.qza \
+  --o-classifier silva_132_99_16S_classifier.qza
+
+# Test the Naive Bayes classifier using your data in file rep-seqs.qza above
+
+qiime feature-classifier classify-sklearn \
+  --i-classifier classifier.qza \
+  --i-reads rep-seqs.qza \
+  --o-classification taxonomy.qza
+
+qiime metadata tabulate \
+  --m-input-file taxonomy.qza \
+  --o-visualization taxonomy.qzv
