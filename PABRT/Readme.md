@@ -16,6 +16,8 @@ Contact information: kcrandall@gwu.edu; mlosada@gwu.edu
 ## Learning Objectives
 * How to produce taxon tables from [QIIME2](https://qiime2.org/)
   * [QIIME2 Tutorial](https://docs.qiime2.org/2021.2/tutorials/moving-pictures/)
+  * [DADA2](https://benjjneb.github.io/dada2/) available within QIIME2
+  * [DADA2 Tutorial](https://benjjneb.github.io/dada2/tutorial.html)
 * How to import taxon tables into [MicrobiomeAnalyst](https://www.microbiomeanalyst.ca/)
   * [MicrobiomeAnalyst Tutorial](https://www.microbiomeanalyst.ca/MicrobiomeAnalyst/resources/tutorials/MDP_update.pdf)
 * How to calculate alpha-diversity, beta-diversity, etc.
