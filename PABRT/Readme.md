@@ -36,8 +36,11 @@ You will need a computer with QIIME2 installed and an internet connection to dow
 
 3:00-5:00pm : Independent Work on Hypothesis Testing
 
-## Other important links
+## Data Files
 * [Metadata Files](https://github.com/gwcbi/Workshops/tree/master/PABRT/Data)
+
+## Group generated Hypotheses Google Doc link
+* [Google Doc](https://docs.google.com/document/d/15H52Nhp65--FwdsDzAn5x_r7UxYu1N4CN9FaoKMYXGA/edit?userstoinvite=luis.velez40@upr.edu&ts=604a55fa&actionButton=1)
 
 ## Workshop materials
 * [Crandall powerpoint as pdf](Workshops/PABRT/CrandallTalk.pdf)
